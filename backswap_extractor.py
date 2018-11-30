@@ -23,7 +23,7 @@ def decrypt_bmp_shellcode(dirname):
     for f in os.listdir(dirname):
         if f.endswith(".bmp"):
             fname = os.path.join(dirname, f)
-            # Open the file in Write mode
+            # Open the file with radare2
             r2 = r2pipe.open(fname)
 
             # Enable caching mode
